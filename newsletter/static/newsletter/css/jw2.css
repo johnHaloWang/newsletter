@@ -1,0 +1,142 @@
+/* CSS */
+.hsContainer {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    overflow: hidden;
+    position: relative;
+    opacity: 1;
+}
+.hsContent {
+    max-width: 250px;
+    margin: -150px auto 0 auto;
+    display: table-cell;
+    vertical-align: middle;
+    background-color: transparent;
+    padding: 0 8%;
+    text-align: center
+}
+.bcg {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.logo{
+    background-image:url('../img/logo1.png');
+    width: 200px;
+    height: 60px;
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+    border-color: transparent
+;
+}
+.sl1 {
+   /* width: 100%;
+    min-height: 100vh;
+    position: relative;
+    border: 1px dotted rgba(0,0,0,0.1);
+    */
+
+    min-height: 100vh;
+    width: 100%;
+}
+.sli .content {
+    margin-top: 40vh;
+    position: relative;
+    z-index: 2;
+}
+.section {
+    width: 100%;
+     min-height: 100vh;
+     position: relative;
+     border: 1px dotted rgba(0,0,0,0.1);
+
+
+}
+.section .content {
+    margin-top: 40vh;
+    position: relative;
+    z-index: 2;
+}
+.section h1 {
+    font-family: Georgia;
+    text-align: center;
+    font-size: 10vw;
+}
+
+.foreground-clouds {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+}
+/* Slide 1 */
+#slide-1 .bcg {background-image:url('../img/background2.png')}
+#slide-2 .bcg {
+    background: none;
+    background-color: #010101;
+    height: 310px;
+    text-align: center
+}
+#slide-3 .bcg {background-image:url('../img/bcg_slide-3.jpg')}
+.curtainContainer {
+    width: 100%; height: 100%;
+    position: relative;
+}
+.curtainContainer .curtain {
+    width: 300%; height: 1px;
+    background-color: #000000;
+    position: absolute; top: 25%; left: 0;
+    opacity: 0
+}
+.curtainContainer .copy {
+    position: absolute;
+    bottom: 30%; left: 0;
+    width: 100%; text-align: center;
+}
+#slide-4 .bcg {background-image:url('../img/bcg_slide-4.jpg')}
+
+/* Navigation */
+#slideNav {
+    display: none;
+    position: fixed;
+    right: 0;
+    top: 50%;
+    margin-top: -80px;
+    z-index: 11;
+}
+#slideNav ul {
+    list-style: none;
+    color: #000000;
+    font-size: 13px;
+    text-align: center;
+}
+#slideNav li {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    background-color: rgba(255,255,255,0.70);
+    margin-bottom: 1px;
+}
+.no-rgba  #slideNav li {background-color: #ffffff}
+#slideNav a {
+    display: block;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    color: #000000;
+}
+#slideNav a.disabled {
+    cursor: default;
+}
+
+

@@ -1,0 +1,204 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Demo - How to create a parallax scrolling website</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!--
+        * This demo was prepared for you by Petr Tichy - Ihatetomatoes.net
+        * Want to see more similar demos and tutorials?
+        * Help by spreading the word about Ihatetomatoes blog.
+        * Facebook - https://www.facebook.com/ihatetomatoesblog
+        * Twitter - https://twitter.com/ihatetomatoes
+        * Google+ - https://plus.google.com/u/0/109859280204979591787/about
+    -->
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <style type="text/css">
+        .back-link a {
+            color: #4ca340;
+            text-decoration: none;
+            border-bottom: 1px #4ca340 solid;
+        }
+        .back-link a:hover,
+        .back-link a:focus {
+            color: #408536;
+            text-decoration: none;
+            border-bottom: 1px #408536 solid;
+        }
+        h1 {
+            height: 100%;
+            /* The html and body elements cannot have any padding or margin. */
+            margin: 0;
+            font-size: 14px;
+            font-family: 'Open Sans', sans-serif;
+            color: #1c1d1e;
+            font-size: 32px;
+            margin-bottom: 3px;
+        }
+        h2 {
+            color: #1c1d1e;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: normal;
+        }
+        .entry-header .inner {
+            text-align: left;
+            margin: 0 auto 20px auto;
+            width: 800px;
+        }
+        .entry-header { padding-top: 20px; background-color: #fff; width:100%; position: fixed; top: 0; left: 0; z-index: 999999}
+        .socialLinks {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000000;
+        }
+        .fb-like,
+        .twitter-follow-button,
+        .twitter-share-button {margin-right: 10px;}
+        #carbonads-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000000;
+        }
+    </style>
+</head>
+<body class="loading">
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=580445718641008";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<!--[if lt IE 7]>
+<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+<![endif]-->
+
+<div id="carbonads-container">
+    <a href="https://ihatetomatoes.net/product/parallax-scrolling-master-class/?utm_source=PSM&amp;utm_medium=banner&amp;utm_campaign=top%20banner%20demo"><img src="https://ihatetomatoes.net/wp-content/uploads/2014/07/img_psm-red-155x220.png" alt="Parallax Scrolling Master Class by Petr Tichy" /></a>
+</div>
+
+<div class="socialLinks">
+    <div class="fb-like" data-href="http://ihatetomatoes.net/how-to-create-a-parallax-scrolling-website/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
+    <a href="https://twitter.com/share" class="twitter-share-button" data-lang="en" data-text="How to create a parallax scrolling website using Skrollr.js" data-url="http://ihatetomatoes.net/how-to-create-a-parallax-scrolling-website/" data-via="ihatetomatoes" data-count="none">Tweet</a>
+    <a href="https://twitter.com/ihatetomatoes" class="twitter-follow-button" data-show-count="false">Follow @ihatetomatoes</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</div>
+
+<header class="entry-header">
+    <div class="inner">
+        <nav class="back-link">
+            <span class="nav-previous"><a href="https://ihatetomatoes.net/how-to-create-a-parallax-scrolling-website/" rel="prev"><span class="meta-nav">&larr;</span> Back to article</a></span>
+        </nav><!-- .nav-single -->
+
+        <h1 class="entry-title">Demo - How to create a parallax scrolling website</h1>
+    </div>
+</header>
+
+<main>
+    <section id="slide-1" class="homeSlide">
+        <div class="bcg" data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% -100px;" data-anchor-target="#slide-1">
+            <div class="hsContainer">
+                <div class="hsContent" data-center="opacity: 1" data-106-top="opacity: 0" data-anchor-target="#slide-1 h2">
+                    <h2>Fade out elements before<br />they leave viewport</h2>
+                    <p>This slide moves background image at a slower speed then the page scroll. Text is fading out to opacity 0 at 106 pixels from the top.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="slide-2">
+        <div class="bcg" data-0="background-color:rgb(1,27,59);" data-top="background-color:(0,0,0);"  data-anchor-target="#slide-2">
+            <div class="hsContainer">
+                <div class="hsContent">
+                    <h2 data-center="opacity: 1" data--200-bottom="opacity: 0" data-206-top="opacity: 1" data-106-top="opacity: 0" data-anchor-target="#slide-2 h2">Fade me in and out</h2>
+                    <p data-center="opacity: 1" data--200-bottom="opacity: 0" data-206-top="opacity: 1" data-106-top="opacity: 0" data-anchor-target="#slide-2 h2">Here we are changing the background color from blue to black. Text is fading in at 206 pixels from the bottom and fading out 106 pixels from the top.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="slide-3" class="homeSlide">
+        <div class="bcg" data-center="background-position: 0px 50%;" data-bottom-top="background-position: 0px 40%;" data-top-bottom="background-position: -40px 50%;" data-anchor-target="#slide-3">
+            <div class="hsContainer">
+                <div class="hsContent">
+                    <div class="plaxEl" data-106-top="opacity: 0" data--30p-top="opacity: 1;" data--60p-top="opacity: 0;" data-bottom="opacity: 1; position: fixed; top: 206px; width: 100%; left: 0;"  data-anchor-target="#slide-3">
+                        <h2>Fixed element fading in and out</h2>
+                        <p><span class="bgBlack">Text is fixed 206 pixels from the top, while the background is moving 40 pixels to the left.</span></p>
+                        <p><span class="bgBlack">Or did you think that the scooter is driving off?</span></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="slide-4" class="homeSlide homeSlideTall">
+        <div class="bcg" data-center="background-position: 50% 0px;" data-bottom-top="background-position: 50% 100px;" data-top-bottom="background-position: 50% -100px;" data-anchor-target="#slide-4">
+            <div class="curtainContainer">
+
+                <div class="curtain" data-bottom-top="opacity: 0" data-106-top="height: 1%; opacity: 0; top: -10%;" data-center="height: 100%; opacity: 0.5; top: 0%;" data-anchor-target="#slide-4"></div>
+                <div class="copy" data-bottom-top="opacity: 0" data--100-bottom="opacity: 0" data--280-bottom="opacity: 1;" data-280-top="opacity: 1;" data-106-top="opacity: 0;" data-anchor-target="#slide-4 .copy">
+                    <h2>Curtain effect while you scroll</h2>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="slide-5" class="homeSlide homeSlideTall2">
+        <div class="bcg">
+            &nbsp;
+        </div>
+        <div class="bcg bcg2" data-bottom-top="opacity: 0;" data--33p-top="opacity: 0;" data--66p-top="opacity: 1;" data-anchor-target="#slide-5">
+            <div class="hsContainer">
+                <div class="hsContent" data-bottom-top="opacity: 0;" data-center="opacity: 1" data-anchor-target="#slide-5">
+                    <h2>Fixed element fading in and out</h2>
+                    <p>Showcase your beautiful images before blurring the scene and fading in your headline.</p>
+                </div>
+            </div>
+        </div>
+        <div class="bcg bcg3" data-300-bottom="opacity: 0;" data-100-bottom="opacity: 1;" data-anchor-target="#slide-5">
+            <div class="hsContainer">
+                <div class="hsContent" data-100-bottom="opacity: 0;" data-bottom="opacity: 1;" data-anchor-target="#slide-5">
+                    <h2>The End</h2>
+                    <p>Not enough parallax goodness? Let me know in the comments or hit me up at <a href="https://www.twitter.com/ihatetomatoes" target="_blank">@ihatetomatoes</a>.<br /><br /></p><p> Go to Part 2, where we will add <a href="https://ihatetomatoes.net/how-to-create-a-parallax-scrolling-website-part-2/">one page navigation</a>.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+<script src="js/lib/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/skrollr.min.js"></script>
+<script src="js/_main.js"></script>
+
+
+<script>window.jQuery || document.write('<script src="js/lib/jquery.min.js"><\/script>')</script>
+<script src="js/imagesloaded.js"></script>
+<script src="js/skrollr.js"></script>
+<script src="js/_main.js"></script>
+
+<!-- Google Analytics: change UA-839919-3 to be your site's ID. -->
+<script>
+    var _gaq=[['_setAccount','UA-839919-3'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        g.src='//www.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+</body>
+</html>

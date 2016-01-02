@@ -1,0 +1,29 @@
+body {
+
+  min-height: 1000px;
+}
+
+.navbar {
+
+  background-color: darkkhaki;
+  margin-bottom: 0px !important;
+
+}
+.navbar-default .navbar-brand{
+  color: #fff;
+
+}
+.navbar-default .navbar-brand:hover{
+  color: #777;
+
+}
+.navbar-default .navbar-nav>li>a:hover{
+  color: #999;
+
+}
+.navbar-default .navbar-toggle {
+  border-color: transparent !important;
+}
+.navbar-toggle {
+  background-color: darkkhaki !important;
+}
